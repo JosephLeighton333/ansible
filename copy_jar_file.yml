@@ -1,5 +1,5 @@
 name: Copy jar file from GitHub to server
-  hosts: your_server
+  hosts: 192.168.56.101
   gather_facts: false
 
   vars:
