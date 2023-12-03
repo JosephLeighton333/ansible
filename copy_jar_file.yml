@@ -1,20 +1,20 @@
 ---
 - name: Copy jar file from GitHub to server
-  hosts:10.0.2.4
-  gather_facts:false
+  hosts: 10.0.2.4
+  gather_facts: false
 
   vars:
-    github_repo_url:"https://github.com/JosephLeighton333/ansible.git"
-    jar_file_path:"spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"
+    github_repo_url: "https://github.com/JosephLeighton333/ansible.git"
+    jar_file_path: "spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"
 
   tasks:
     - name: Clone GitHub repository
       git:
-        repo:"https://github.com/JosephLeighton333/ansible.git"
-        dest:"/tmp/JosephLeighton333/ansible"
-        version:master
+        repo: "https://github.com/JosephLeighton333/ansible.git"
+        dest: "/tmp/JosephLeighton333/ansible"
+        version: master
 
     - name: Copy jar file to server
       copy:
-        src:"/tmp/JosephLeighton333/ansible/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"
-        dest:"/home/vboxuser/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"
+        src: "/tmp/JosephLeighton333/ansible/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"
+        dest: "/home/vboxuser/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"
