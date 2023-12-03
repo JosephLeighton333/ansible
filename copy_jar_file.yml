@@ -1,5 +1,5 @@
 name: Copy jar file from GitHub to server
-  hosts: vboxuser@10.0.2.4
+  hosts: 10.0.2.15
   gather_facts: false
 
   vars:
