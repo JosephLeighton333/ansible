@@ -1,6 +1,6 @@
 ---
 - name: Copy jar file from GitHub to server
-  hosts: WebServer
+  hosts: 10.0.2.4:
   gather_facts: false
 
   vars:
