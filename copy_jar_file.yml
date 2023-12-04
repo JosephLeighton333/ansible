@@ -1,6 +1,6 @@
 ---
 - name: Copy jar file from GitHub to server
-  ansible_host: 10.0.2.15
+  hosts: WebServer
   gather_facts: false
 
   vars:
